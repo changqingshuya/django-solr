@@ -73,7 +73,7 @@ class QuerySet(object):
     def iterator(self):
         for response in self._get_responses():
             for doc in response['response']['docs']:
-                yield self._model.create(doc)       
+                yield self._model.create(doc)
 
     def __nonzero__(self):
         if self._result_cache is not None:

@@ -30,6 +30,7 @@ def request(method, path, query=None, body=None):
         raise
     
 def select(query):
+    #print query
     return request('GET', settings.DJANGOSOLR_SELECT_PATH, query)
     
 def save(docs, commit=True, overwrite=True):

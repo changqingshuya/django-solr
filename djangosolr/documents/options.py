@@ -20,7 +20,7 @@ class Options(object):
     def get_solr_field_name(self, field):
         if isinstance(field, basestring):
             field = self.get_field(field)
-        return escape(u'%s__%s' % (self.type, field.name,))
+        return escape(u'%s' % (field.name,))
     
     def get_solr_id_field(self):
         return settings.DJANGOSOLR_ID_FIELD

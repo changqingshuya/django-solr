@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="dht网络搜索，BT资源搜索,迅雷搜索,BT搜索,磁力搜索,磁力链接,BT种子搜索，BT下载, 在线播放, 云点播，51soubt">
+    <meta name="description"
+        content="【51soubt.com】51soubt是功能强大的磁力链接搜索引擎，拥有互联网最新最热的BT资源。包括电影、剧集、音乐、图书、软件、动漫、软件、教程、图片、综艺、游戏等资源，因此又被誉为BT种子搜索神器。">
+    <meta name="author" content="51soubt">
+
+    <title>51SouBT|我要搜种子|我要搜BT【51soubt.com】</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css" />
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script src="/static/bootstrap/js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript">
+         $().ready(function(e) {
+			$(".topUl a").click(function(e) {
+				if(!$(this).hasClass("current")){
+					//$("#searchform").attr("action",$(this).data("action"));
+					$(".topUl a").removeClass("current").filter(this).addClass("current");
+				}
+			});
+		});
+
+        function searchSubmit(){
+            var mysearch = $(".searchinput").val();
+            if($.trim(mysearch) == "*"){
+                alert("“*”不在查询范围内，建议尝试其他相关词。");
+                return false;
+            }
+            if($.trim(mysearch) == ""){
+                alert("输入的关键字为空！请重新输入！");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+		<div class="topTitle">
+			<ul class="topUl">
+				<li><a href="/" data-action='' class="current" >磁力搜索</a></li>
+				<!--<li><a href="javascript:void(0);" data-action='' >搜索排行</a></li>
+				<li><a href="javascript:void(0);" data-action='' >注册登录</a></li>-->
+			</ul>
+		</div>
+
+
+		<div id="userInfo" class="userInfo">
+			<!--  			注册 |登陆 -->
+		</div>
+
+		<div id="logo" class="logodiv">
+			<img alt="" src="/static/images/logo.png" />
+		</div>
+
+
+		<form id="searchform" name="searchform"
+			action="/search" method="get">
+
+			<div id="search" class="search">
+				<input type="text" name="searchinput" class="searchinput" id="searchinput" />
+				<input type="submit" name="search" value="" class="searchSubmit" onclick="return searchSubmit();"/>
+			</div>
+		</form>
+
+        <!--
+		<div class="hotword">
+			热门关键字 ：
+			{{ title }}
+		</div>-->
+
+           <!--
+		<div class="resCount">
+		1000000<br/>
+
+			<div class="countInfo">
+			数据已更新...
+			</div>
+
+		</div>-->
+
+		<div class="buttom">
+			<br />
+			<br />
+			<!--	<a href="./about.jsp" target="_blank">关于我们</a> |<a target="_blank" href="./mianzheshengming.jsp" > 免责声明 </a>| <a target="_blank" href="./connectus.jsp">联系我们</a> |<a target="_blank" href="./typeIn.jsp"> 申请录入</a> | <a target="_blank" href="./fankui.jsp">使用反馈</a> | <a target="_blank" href="./connectus.jsp">广告合作</a>-->
+			<br />
+			<br />
+			@2014 <b>51soubt</b> 版权所有
+			<br />
+		</div>
+
+        <div style="margin-top: 170px;float:left;">
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F54c595cdb6aafcd35152a09dfb52393d' type='text/javascript'%3E%3C/script%3E"));
+</script>
+          </div>
+
+</body>
+</html>

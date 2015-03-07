@@ -1,6 +1,6 @@
-
+#coding:utf-8
 DJANGOSOLR_ID_FIELD = 'id'
-DJANGOSOLR_TYPE_FIELD = 'type'
+DJANGOSOLR_TYPE_FIELD = '*'
 
 DJANGOSOLR_FIELD_MAPPING = {
     'django.db.models.fields.AutoField': 'djangosolr.documents.fields.IntegerField',
@@ -17,7 +17,8 @@ DJANGOSOLR_FIELD_MAPPING = {
 }
 
 DJANGOSOLR_AUTOCOMMIT = True
-DJANGOSOLR_URL = 'http://localhost:8983/solr'
+#DJANGOSOLR_URL = 'http://localhost:8080/solr/collection1'
+DJANGOSOLR_URL = 'http://182.92.185.167:8080/solr/collection1'
 DJANGOSOLR_SELECT_PATH = '/select'
 DJANGOSOLR_UPDATE_PATH = '/update/json'
 DJANGOSOLR_DELETE_PATH = '/update/json'
